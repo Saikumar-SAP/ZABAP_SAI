@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Patient Details'
+define service ZPTNT_DTLS_SERDEF {
+  expose ZPTNT_DTLS_PROJ        as Details;
+  expose ZPTNT_APNMT_PROJ_CHILD as APPOINTMENT;
+}

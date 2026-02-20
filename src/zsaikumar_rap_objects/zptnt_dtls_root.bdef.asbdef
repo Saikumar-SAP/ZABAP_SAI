@@ -1,0 +1,27 @@
+managed implementation in class zbp_ptnt_dtls_root unique;
+strict ( 2 );
+
+define behavior for ZPTNT_DTLS_ROOT //alias <alias_name>
+persistent table zptnt_dtls_tab
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) PatientId;
+  association _appointment { create; }
+}
+
+define behavior for ZPTNT_APNMT_CHILD //alias <alias_name>
+persistent table zptnt_apnmt_tab
+lock dependent by _details
+authorization dependent by _details
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) PatientId, AppointmentId;
+  association _details;
+}

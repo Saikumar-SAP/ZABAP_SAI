@@ -1,0 +1,29 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZPTNT_APNMT_PROJ_CHILD
+    with 
+{
+  @UI:{lineItem: [{  position: 10,importance: #HIGH }],
+                identification: [{position: 10 }]
+  }
+    AppointmentId;
+   @UI:{lineItem: [{position: 20,importance: #HIGH }],
+        identification: [{position: 20 }]}   
+    Doctorid;
+    @UI:{lineItem: [{position: 30,importance: #HIGH }],
+      identification: [{position: 30 }]
+  }
+    Apptdate;
+    @UI:{lineItem: [{position: 40,importance: #HIGH }],
+       identification: [{position: 40 }]
+  }
+    Appttime;
+ @UI:{lineItem: [{position: 50,importance: #HIGH }],
+        identification: [{position: 50 }]
+  }   
+    Status;
+    @UI:{lineItem: [{position: 60,importance: #HIGH }],
+      identification: [{position: 60 }]
+  }
+    Lastchangedat;
+    
+}
